@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #007A33;
+  color: white;
+}
+
+header .logo img {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.hero {
+  padding: 60px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.hero h1 span {
+  color: #007A33;
+}
+
+.container, .conteiner {
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.servicios .services-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las tarjetas */
+  
+}
+
+.service-item {
+  flex: 1 1 calc(33.333% - 40px); /* Tres tarjetas por fila con espacio entre ellas */
+  max-width: calc(33.333% - 40px);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Color de fondo de las tarjetas */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.service-icon {
+  margin-bottom: 10px;
+  color: #007b5f; /* Color de los íconos */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .service-item {
+    flex: 1 1 calc(50% - 40px); /* Dos tarjetas por fila en pantallas medianas */
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    flex: 1 1 100%; /* Una tarjeta por fila en pantallas pequeñas */
+    max-width: 100%;
+  }
+}
+
+
+/* .service-item {
+  text-align: center;
+  width: 220px;
+}
+
+.servicios .container h2{
+  text-align: center;
+}
+
+.service-icon {
+  color: #007b5f;
+  margin-bottom: 10px;
+} */
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+.form-section {
+  display: none;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.login-links a {
+  font-size: 14px;
+  color: blue;
+  cursor: pointer;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 0;
+  background: #333;
+  color: white;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

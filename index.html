@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizonte Antioqueño</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="shortcut icon" href="img/ChatGPT Image 6 abr 2025, 10_25_43.png"  type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/58aaef7d95.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="img/ChatGPT Image 6 abr 2025, 10_25_43.png" alt="Logo" /></div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#turismo">Turismo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="javascript:void(0)" onclick="mostrarLogin()">Login</a></li>
+        <li><a href="#Nuestros servicios">servicios</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </header>
+
+  <section id="inicio" class="hero" style="background-image: url(img/Municipios-de-Antioquia-que-Debes-Visitar.jpg)">
+    <div class="content">
+      <h1>Bienvenido a <span>Antioquia</span></h1>
+      <p>Antioquia te espera con los brazos abiertos. ¡Prepárate para vivir experiencias inolvidables!</p>
+    </div>
+  </section>
+
+  <section id="turismo" class="turismo" style="background-image: url(img/Pueblos-para-hacer-turismo-en-Antioquia-1.jpg);">
+    <h2>Turismo en Antioquia</h2>
+    <div class="container">
+      <div class="card">
+        <img src="img/santa fe.jpg" alt="Santa Fe" class="card-img" />
+        <div class="card-body">
+          <p class="card-text">Conocido por sus casas coloridas, la Piedra del Peñol y el embalse de Guatapé, ideal para actividades acuáticas y senderismo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/museoaAnt.jpg" alt="Museo de Antioquia" class="card-img" />
+        <div class="card-body">
+          <p class="card-text">Ubicado en Medellín, alberga una importante colección de arte antioqueño, incluyendo obras de Fernando Botero.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Plaza-Botero.webp" alt="Plaza Botero" class="card-img" />
+        <div class="card-body">
+          <p class="card-text">Un espacio público en Medellín dedicado a las esculturas de Fernando Botero, un lugar perfecto para admirar el arte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios"> 
+   
+    <div class="container">
+      <h2>Nuestros servicios</h2>
+      <div class="services-row">
+        
+        <div class="service-item">
+          <i class="fas fa-hiking fa-3x service-icon"></i>
+          <h5>Guías turísticos</h5>
+          <p>Recorre Antioquia de la mano de expertos locales.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-bus fa-3x service-icon"></i>
+          <h5>Transporte cómodo</h5>
+          <p>Viajes seguros y organizados a todos los destinos.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-bed fa-3x service-icon"></i>
+          <h5>Alojamientos</h5>
+          <p>Reservas en hoteles, hostales y fincas turísticas.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-ambulance fa-3x service-icon"></i>
+          <h5>Servicios de emergencia</h5>
+          <p>Asistencia rápida en situaciones de emergencia.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-tools fa-3x service-icon"></i>
+          <h5>Servicio técnico</h5>
+          <p>Soporte para dispositivos y orientación tecnológica durante tu viaje.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto" style="background-image: url();">
+    <div class="container">
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <h2>Contáctanos</h2>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" placeholder="Tu correo" />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="login" class="form-section" style="background-image: url();">
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required />
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required />
+      </div>
+      <button type="submit">Entrar</button>
+    </form>
+    <div class="login-links">
+      <a onclick="mostrarRegistro()">¿No tienes cuenta? Regístrate</a><br />
+      <a onclick="mostrarRecuperar()">¿Olvidaste tu contraseña?</a>
+    </div>
+  </section>
+
+  <section id="registro" class="form-section" style="background-image: url();">
+    <h2>Registro de Usuario</h2>
+    <form id="registro-form">
+      <div class="form-group">
+        <label for="nuevo-usuario">Usuario:</label>
+        <input type="text" id="nuevo-usuario" required />
+      </div>
+      <div class="form-group">
+        <label for="nuevo-email">Correo electrónico:</label>
+        <input type="email" id="nuevo-email" required />
+      </div>
+      <div class="form-group">
+        <label for="nueva-contrasena">Contraseña:</label>
+        <input type="password" id="nueva-contrasena" required />
+      </div>
+      <button type="submit">Registrarse</button>
+      <button type="button" onclick="mostrarLogin()">Volver al Login</button>
+    </form>
+  </section>
+
+  <section id="recuperar" class="form-section" style="background-image: url();">
+    <h2>Recuperar Contraseña</h2>
+    <form id="recuperar-form">
+      <div class="form-group">
+        <label for="correo-recuperar">Correo electrónico:</label>
+        <input type="email" id="correo-recuperar" required />
+      </div>
+      <button type="submit">Enviar enlace</button>
+      <button type="button" onclick="mostrarLogin()">Volver al Login</button>
+    </form>
+  </section>
+
+
+  <footer class="redes">
+    <div class="footer-social">
+      <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-bottom">
+      &copy; Horizonte Antioqueño - Todos los derechos reservados | Diseñado por <strong>Santiago Carmona Cañas</strong>
+    </div>
+  </footer>
+  <!-- <footer class="redes">
+    <div class="footer-social">
+      <a href="#https://www.instagram.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-bottom">
+      &copy; Horizonte Antioqueño - Todos los derechos reservados | Diseñado por <strong>Santiago Carmona Cañas</strong>
+    </div>
+  </footer> -->
+
+  <script >
+    function mostrarLogin() {
+      document.getElementById('login').style.display = 'block';
+      document.getElementById('registro').style.display = 'none';
+      document.getElementById('recuperar').style.display = 'none';
+      window.scrollTo(0, document.getElementById('login').offsetTop);
+    }
+
+    function mostrarRegistro() {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('registro').style.display = 'block';
+      document.getElementById('recuperar').style.display = 'none';
+    }
+
+    function mostrarRecuperar() {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('registro').style.display = 'none';
+      document.getElementById('recuperar').style.display = 'block';
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const usuario = document.getElementById('usuario').value;
+      const contrasena = document.getElementById('contrasena').value;
+      if (usuario === 'santiago' && contrasena === '123456789') {
+        alert('Inicio de sesión exitoso');
+        location.href = '#inicio';
+      } else {
+        alert('Usuario o contraseña incorrectos');
+      }
+    });
+
+    function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('show');
+}
+
+  </script>
+
+</body>
+</html>
